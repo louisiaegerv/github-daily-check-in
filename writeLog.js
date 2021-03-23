@@ -1,9 +1,13 @@
-const fs = require("fs");
+const fs = require('fs')
 
-fs.appendFile("./checkin-log.txt", `Log: ${new Date().toString()}`, (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("Wrote log.");
+fs.appendFile(
+  './checkin-log.txt',
+  `\nLog: ${new Date().toString()}\n`,
+  (err) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log('Wrote log.')
+    }
   }
-});
+)
